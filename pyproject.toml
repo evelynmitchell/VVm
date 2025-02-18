@@ -1,18 +1,14 @@
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
-name = "paper"
-version = "0.0.1"
-description = "Paper - Pytorch"
+[project]
+name = "VVm"
+version = "0.1.0"
+description = "smile-consistent implied volatility of equity index option"
 license = "MIT"
-authors = ["Evelyn Mitchell <efmphone@gmail.com"]
-homepage = "https://github.com/evelynmmitchell/paper"
-documentation = "https://github.com/evelynmitchell/paper"  # Add this if you have documentation.
-readme = "README.md"  # Assuming you have a README.md
-repository = "https://github.com/evelynmitchell/paper"
-keywords = ["artificial intelligence", "deep learning", "optimizers", "Prompt Engineering"]
+authors = [{name = "Evelyn Mitchell", email = "efmphone@gmail.com"}]
+homepage = "https://github.com/evelynmmitchell/VVm"
+documentation = "https://github.com/evelynmitchell/VVm"
+readme = "README.md"
+repository = "https://github.com/evelynmitchell/VVm"
+keywords = ["options", "volatility", "Vanna-Volga"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -20,15 +16,28 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.10"
 ]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.3",
+    "pandas>=2.2.3",
+    "pytest>=8.3.4",
+    "pytest-mock>=3.14.0",
+    "scipy>=1.15.2",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
-python = "^3.10"
 
+python = "^3.11"
 
 [tool.poetry.dev-dependencies]
 # Add development dependencies here
-
-
+pytest = "*"
+pytest-mock = "*"
 
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.9.1"
@@ -39,14 +48,12 @@ black = "25.1.0"
 types-chardet = "^5.0.4.6"
 mypy-protobuf = "^3.0.0"
 
-
 [tool.autopep8]
 max_line_length = 80
 ignore = "E501,W6"  # or ["E501", "W6"]
 in-place = true
 recursive = true
 aggressive = 3
-
 
 [tool.ruff]
 line-length = 70
