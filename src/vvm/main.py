@@ -429,4 +429,11 @@ def main():
     query_surface(vol_surface)
 
 if __name__ == '__main__':
+    obb.user.preferences.output_type = "dataframe"
+    options = obb.derivatives.options.chains("AAPL", provider="cboe")
+    """
+    underlying_symbol	underlying_price	contract_symbol	expiration	dte	strike	option_type	open_interest	volume	theoretical_price	...	low	prev_close	change	change_percent	implied_volatility	delta	gamma	theta	vega	rho
+    """
+    print(options.head())
+
     main()

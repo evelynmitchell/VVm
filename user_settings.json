@@ -1,0 +1,17 @@
+# # this goes in ~/.openbb_platform/user_settings.json
+{ 
+    "credentials": {
+      "fmp_api_key": "REPLACE",
+      "polygon_api_key": "REPLACE",
+      "benzinga_api_key": "REPLACE",
+      "fred_api_key": "REPLACE",
+      "nasdaq_api_key": "REPLACE",
+      "intrinio_api_key": "REPLACE",
+      "alpha_vantage_api_key": "REPLACE",
+      "biztoc_api_key": "REPLACE",
+      "tradier_api_key": "REPLACE",
+      "tradier_account_type": "sandbox OR live",
+      "tradingeconomics_api_key": "REPLACE",
+      "tiingo_token": "REPLACE"
+    }
+  }
